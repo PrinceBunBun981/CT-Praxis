@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Info",
+    "settings": [
+      {
+        "type": "button",
+        "name": "",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "            &eHopWatch by PrinceBunBun981",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Type&e /hw&7 for a list of commands in the module.",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Quality of Life",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Should &eHW&7 add extra &dFast Travel&7 commands?",
+        "text": "&cRELOAD",
+        "method": "/Function(\nfunction () {\n    ChatTriggers.loadCT();\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Extra Fast Travel Commands",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Solvers",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Should &eHW&7 show the actual item &dFetchur&7 needs?",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Fetchur Enabled",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Should &eHW&7 automatically solve the &dPuzzler&7 location?",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Puzzler Enabled",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  }
+]
