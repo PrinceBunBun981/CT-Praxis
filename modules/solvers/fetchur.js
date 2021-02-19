@@ -12,7 +12,7 @@ export default ({
             ChatLib.chat("&e[NPC] Fetchur&f: im looking for &dYellow Stained Glass&f.");
             return cancel(event);
         }
-        if (str.includes("circular and sometimes moves")) {
+        if (str.includes("circlular and sometimes moves")) {
             ChatLib.chat("&e[NPC] Fetchur&f: im looking for &dCompass&f.");
             return cancel(event);
         }
@@ -54,6 +54,10 @@ export default ({
         }
         if (str.includes("red and soft")) {
             ChatLib.chat("&e[NPC] Fetchur&f: im looking for &dRed Wool&f.");
+            return cancel(event);
+        }
+        if (str.includes("brown and fluffy")) {
+            ChatLib.chat("&e[NPC] Fetchur&f: im looking for &dRabbit's Foot&f.");
             return cancel(event);
         }
     },

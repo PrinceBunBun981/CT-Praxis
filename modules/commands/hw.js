@@ -6,31 +6,20 @@ export default ({
         if (arg) {
             switch (arg.toLowerCase()) {
                 case "test":
-                    ChatLib.chat("test")
+                    ChatLib.chat("nice you found this pos")
                     break;
             }
         } else {
             var clickableMessage = new Message(
-                "&6&lHOPWATCH HELP! &7&o(You can click on each command)\n",
-                new TextComponent(" &9/fakeboop&f - Sends a Fake Boop from an admin in chat.")
-                    .setClick("run_command", "/fakeboop")
-                    .setHoverValue("&7Runs &e/fakeboop&7 on click."),
-                "\n",
-                new TextComponent(" &9/warps&f - Fast Travel Extra Warp List (SB).")
-                    .setClick("run_command", "/warps")
-                    .setHoverValue("&7Runs &e/warps&7 on click."),
-                "\n",
-                new TextComponent(" &9/warp&f - Fast Travel Warp Menu (SB).")
-                    .setClick("run_command", "/warp")
-                    .setHoverValue("&7Runs &e/warp&7 on click."),
-                "\n",
-                new TextComponent(" &9/scooby&f - Like zoinks Scoob.")
-                    .setClick("run_command", "/scooby")
-                    .setHoverValue("&7Runs &e/scooby&7 on click."),
-                "\n",
-                new TextComponent(" &9/whadafak&f - I don't even know.")
-                    .setClick("run_command", "/whadafak")
-                    .setHoverValue("&7Runs &e/whadafak&7 on click."),
+                "&6&m" + ChatLib.getChatBreak("-"),
+                "&6&lHOPWATCH! &7Commands:\n",
+                " &9/hwmenu&f - Open the HopWatch settings menu.\n",
+                " &9/ai&f - Manage AutoIgnore settings.\n",
+                " &9/warps&f - Fast Travel Extra Warp List (SB).\n",
+                " &9/warp&f - Fast Travel Warp Menu (SB).\n",
+                " &9/fakeboop&f - Sends a Fake Boop from an admin in chat.\n",
+                " &9/fun&f - Shows all of Hypixel's fun commands.",
+                "&6&m" + ChatLib.getChatBreak("-")
               );
             ChatLib.chat(clickableMessage)
         }
