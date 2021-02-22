@@ -15,6 +15,8 @@ import { settings } from "./settings";
 //-- Import all other modules from the modules folder 
 
 // Commands
+require("./modules/commands/fun.js");
+
 import hw from "./modules/commands/hw.js";
 register("command", hw.callback).setTabCompletions(hw.tabCompletions).setName(hw.name);
 
@@ -27,13 +29,8 @@ register("command", whadafak.callback).setName(whadafak.name)
 import fakeboop from "./modules/commands/fakeboop.js";
 register("command", fakeboop.callback).setTabCompletions(fakeboop.tabCompletions).setName(fakeboop.name);
 
-// Extra Warp Commands
-import warps from "./modules/commands/warps.js";
-import warplist from "./modules/commands/warplist.js";
-if (settings.getSetting("Quality of Life", "Extra Fast Travel Commands")) {
-    register("command", warps.callback).setTabCompletions(warps.tabCompletions).setName(warps.name);
-    register("command", warplist.callback).setName(warplist.name);
-}
+import prince from "./modules/commands/prince.js";
+register("command", prince.callback).setTabCompletions(prince.tabCompletions).setName(prince.name);
 
 // Solvers
 import fetchur from "./modules/solvers/fetchur.js";
@@ -42,3 +39,13 @@ register("chat", fetchur.callback).setCriteria(fetchur.criteria);
 import puzzler from "./modules/solvers/puzzler.js";
 register("chat", puzzler.chat).setCriteria(puzzler.criteria);
 register("tick", puzzler.tick);
+
+// Utilities
+require("./modules/utilities/betterfriendlist.js");
+require("./modules/utilities/betterparties.js");
+require("./modules/utilities/autoignore.js");
+require("./modules/utilities/joinleavecolors.js");
+
+if (settings.getSetting("Quality of Life", "Extra Fast Travel Commands")) {
+    require("./modules/utilities/betterfasttravel.js")
+}

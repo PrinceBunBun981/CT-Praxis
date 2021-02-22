@@ -1,7 +1,7 @@
 {
-  "name": "HopWatch",
+  "name": "Praxis",
   "creator": "PrinceBunBun981",
   "description": "A bunch of random features. Type /hwnenu for more information.",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "entry": "index.js"
 }
