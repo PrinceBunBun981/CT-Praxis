@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Info",
+    "settings": [
+      {
+        "type": "button",
+        "name": "",
+        "text": "&cv1.1.2",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "            &cPraxis&7 by&d PrinceBunBun981",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Type&e /px&7 for a list of commands in the module.",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Quality of Life",
+    "settings": [
+      {
+        "type": "toggle",
+        "name": "Better Friends List",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Better Parties",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Join Leave Notification Color",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Extra Fast Travel Commands",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Solvers",
+    "settings": [
+      {
+        "type": "toggle",
+        "name": "Fetchur Enabled",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Puzzler Enabled",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Auto Ignore",
+    "settings": [
+      {
+        "type": "toggle",
+        "name": "Enabled",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  }
+]
