@@ -1,5 +1,4 @@
-register("command", (args) => {
-    if (!settings.getSetting("Better Utilities", "Better Fast Travel")) return;
+register("command", (arg) => {
     var p1 = new Message(
         "&d&lFAST TRAVEL! &7Page &e1 &7&o(You can click on each warp)\n",
         new TextComponent(" &9SkyBlock Hub&f - hub, l, lobby")
@@ -32,10 +31,10 @@ register("command", (args) => {
         new TextComponent(" &a&l>>")
             .setClick("run_command", "/warps 2")
             .setHoverValue("&7Runs &e/warps 2&7 on click."),
-        )
-        // << - >>
-        //    - >>
-        // << -   
+    )
+    // << - >>
+    //    - >>
+    // << -   
     var p2 = new Message(
         "&d&lFAST TRAVEL! &7Page &e2 &7&o(You can click on each warp)\n",
         new TextComponent(" &9Dwarven Mines&f - mines, dwarf, dwarven, dm")
@@ -84,10 +83,8 @@ register("command", (args) => {
             .setHoverValue("&7Runs &e/warp howl&7 on click."), "\n",
         new TextComponent(" &9Dungeon Hub&f - dungeon_hub, dungeon, dh")
             .setClick("run_command", "/warp dungeon_hub")
-            .setHoverValue("&7Runs &e/warp dungeon_hub&7 on click."), "\n",
-        new TextComponent(" &9Jerry's Workshop&f - jerry, jw, xmas")
-            .setClick("run_command", "/savethejerrys")
-            .setHoverValue("&7Runs &e/savethejerrys&7 on click."),
+            .setHoverValue("&7Runs &e/warp dungeon_hub&7 on click."),
+        "\n",
         "\n",
         "\n",
         "\n",
@@ -106,3 +103,85 @@ register("command", (args) => {
     }
     return ChatLib.chat("&cThat page could not be found.");
 }).setName("warps");
+
+register("command", (arg) => {
+    if (!arg) return ChatLib.command("warp");
+    switch (arg.toLowerCase()) {
+        // HUB
+        case "hub": return ChatLib.command("warp hub")
+        case "lobby": return ChatLib.command("warp hub")
+        case "l": return ChatLib.command("warp hub")
+        // PRIVATE ISLAND
+        case "home": return ChatLib.command("warp home")
+        case "island": return ChatLib.command("warp home")
+        case "is": return ChatLib.command("warp home")
+        // SPIDERS DEN
+        case "spider": return ChatLib.command("warp spider")
+        case "sd": return ChatLib.command("warp spider")
+        // BLAZING FORTRESS
+        case "nether": return ChatLib.command("warp nether")
+        case "net": return ChatLib.command("warp nether")
+        case "bf": return ChatLib.command("warp nether")
+        case "blazing": return ChatLib.command("warp nether")
+        case "blaze": return ChatLib.command("warp nether")
+        // THE END
+        case "end": return ChatLib.command("warp end")
+        case "te": return ChatLib.command("warp end")
+        // THE PARK
+        case "park": return ChatLib.command("warp park")
+        case "tp": return ChatLib.command("warp park")
+        case "forest": return ChatLib.command("warp park")
+        case "tree": return ChatLib.command("warp park")
+        // GOLD MINE
+        case "gold": return ChatLib.command("warp gold")
+        case "gm": return ChatLib.command("warp gold")
+        // DEEP CAVERNS
+        case "deep": return ChatLib.command("warp deep")
+        case "dc": return ChatLib.command("warp deep")
+        // DWARVEN MINES
+        case "mines": return ChatLib.command("warp mines")
+        case "dwarf": return ChatLib.command("warp mines")
+        case "dwarven": return ChatLib.command("warp mines")
+        case "dm": return ChatLib.command("warp mines")
+        // THE BARN
+        case "barn": return ChatLib.command("warp barn")
+        case "tb": return ChatLib.command("warp barn")
+        // MUSHROOM DESERT
+        case "desert": return ChatLib.command("warp desert")
+        case "md": return ChatLib.command("warp desert")
+        case "mushroom": return ChatLib.command("warp desert")
+        // CASTLE
+        case "castle": return ChatLib.command("warp castle")
+        case "tc": return ChatLib.command("warp castle")
+        // SIRIUS SHACK
+        case "da": return ChatLib.command("warp da")
+        case "ss": return ChatLib.command("warp da")
+        case "sirius": return ChatLib.command("warp da")
+        case "dark": return ChatLib.command("warp da")
+        // GRAVEYARD CAVES
+        case "crypt": return ChatLib.command("warp crypt")
+        case "gc": return ChatLib.command("warp crypt")
+        case "grave": return ChatLib.command("warp crypt")
+        // TOP OF NEST
+        case "nest": return ChatLib.command("warp nest")
+        case "ton": return ChatLib.command("warp nest")
+        // MAGMA CUBE BOSS
+        case "magma": return ChatLib.command("warp magma")
+        case "mcb": return ChatLib.command("warp magma")
+        // DRAGONS NEST
+        case "drag": return ChatLib.command("warp drag")
+        case "dragon": return ChatLib.command("warp drag")
+        case "dn": return ChatLib.command("warp drag")
+        // JUNGLE ISLAND
+        case "jungle": return ChatLib.command("warp jungle")
+        case "ji": return ChatLib.command("warp jungle")
+        // HOWLING CAVE
+        case "howl": return ChatLib.command("warp howl")
+        case "hc": return ChatLib.command("warp howl")
+        // DUNGEON HUB
+        case "dungeon_hub": return ChatLib.command("warp dungeon_hub")
+        case "dungeon": return ChatLib.command("warp dungeon_hub")
+        case "dh": return ChatLib.command("warp dungeon_hub")
+    }
+    ChatLib.chat("&cSorry, I don't understand that warp type. Type &e/warps&c for a list of all &dFast Travel&c destinations.")
+}).setName("warp").setTabCompletions(["hub", "lobby", "l", "home", "island", "is", "spider", "sd", "nether", "net", "bf", "blazing", "blaze", "end", "te", "park", "tp", "forest", "tree", "gold", "gm", "deep", "dc", "mines", "dwarf", "dwarven", "dm", "barn", "tb", "desert", "md", "mushroom", "castle", "tc", "da", "ss", "sirius", "dark", "crypt", "gc", "grave", "nest", "ton", "magma", "mcb", "drag", "dragon", "dn", "jungle", "ji", "howl", "hc","dungeon_hub", "dungeon", "dh"]);
