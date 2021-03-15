@@ -5,7 +5,7 @@
       {
         "type": "button",
         "name": "",
-        "text": "&cv1.1.2",
+        "text": "&cv1.4.7",
         "method": "/Function(\n() => {\n}\n)/",
         "hidden": false
       },
@@ -22,16 +22,51 @@
         "text": "",
         "method": "/Function(\n() => {\n}\n)/",
         "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Click any button next to the command information",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7                for more details on it.",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
       }
     ]
   },
   {
-    "name": "Quality of Life",
+    "name": "Better Utilities",
     "settings": [
+      {
+        "type": "button",
+        "name": "&7Gives a better look to &e/f list&7.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo betterfriendslist\", true);\n}\n)/",
+        "hidden": false
+      },
       {
         "type": "toggle",
         "name": "Better Friends List",
         "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Gives a better look for &e/p list&7.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo betterparties\", true);\n}\n)/",
         "hidden": false
       },
       {
@@ -41,14 +76,186 @@
         "hidden": false
       },
       {
+        "type": "button",
+        "name": "&7Adds more &dFast Travel&7 commands. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo betterfasttravel\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Better Fast Travel",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Chat Utilities",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Automatically &cignores&7 users who trigger a filter.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autoignore\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto Ignore",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Bypasses saying &eez&7 on Hypixel filter by adding unicode.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autoignore\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Bypass EZ",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Gives &ajoin&7 and &cleave&7 messages colors.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo joinleavenotificationcolor\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
         "type": "toggle",
         "name": "Join Leave Notification Color",
         "value": true,
         "hidden": false
       },
       {
+        "type": "button",
+        "name": "&7Automatically says &eL&7 in chat when a player is banned.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autol\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
         "type": "toggle",
-        "name": "Extra Fast Travel Commands",
+        "name": "Auto L",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Automatically says &egg&7 when an event is over.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autogg\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto GG",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Pit Utilities",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Hides &c&lSTREAK!&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Pit Streaks",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides &6&lBOUNTY!&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Pit Bounties",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides &e&lNOTE!&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Pit Notes",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides &a&lFREE XP!&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Pit Free XP",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Hide Messages",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Hides &e/tip&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Other Gifts",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides earning &2Guild XP&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Tips",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides \"&cThis gift is for (user), sorry!&7\" messages. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Guild XP",
         "value": true,
         "hidden": false
       }
@@ -58,25 +265,41 @@
     "name": "Solvers",
     "settings": [
       {
-        "type": "toggle",
-        "name": "Fetchur Enabled",
-        "value": true,
+        "type": "button",
+        "name": "&7Solves &dFetchur&7 item puzzles. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo fetchur\", true);\n}\n)/",
         "hidden": false
       },
       {
         "type": "toggle",
-        "name": "Puzzler Enabled",
+        "name": "Fetchur",
         "value": true,
         "hidden": false
-      }
-    ]
-  },
-  {
-    "name": "Auto Ignore",
-    "settings": [
+      },
+      {
+        "type": "button",
+        "name": "&7Solves &dPuzzler&7 puzzles. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo puzzler\", true);\n}\n)/",
+        "hidden": false
+      },
       {
         "type": "toggle",
-        "name": "Enabled",
+        "name": "Puzzler",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Solves &dQuick Maths&7 equations.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo quickmaths\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Quick Maths",
         "value": true,
         "hidden": false
       }

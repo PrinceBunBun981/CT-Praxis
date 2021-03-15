@@ -1,51 +1,38 @@
 /* 
  *  
- *  HopWatch by PrinceBunBun981
+ *  Praxis by PrinceBunBun981
  *  
  */
 
-function delay(ms) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, ms);
-    });
-}
 import { settings } from "./settings";
 //-- Import all other modules from the modules folder 
 
 // Commands
 require("./modules/commands/fun.js");
+require("./modules/commands/px.js");
+require("./modules/commands/randomcommands.js");
+require("./modules/commands/fakeboop.js");
+require("./modules/commands/prince.js")
+require("./modules/commands/givememoreinfo.js")
+require("./modules/commands/quickreport.js")
 
-import hw from "./modules/commands/hw.js";
-register("command", hw.callback).setTabCompletions(hw.tabCompletions).setName(hw.name);
-
-import scooby from "./modules/commands/scooby.js";
-register("command", scooby.callback).setName(scooby.name)
-
-import whadafak from "./modules/commands/whadafak.js";
-register("command", whadafak.callback).setName(whadafak.name)
-
-import fakeboop from "./modules/commands/fakeboop.js";
-register("command", fakeboop.callback).setTabCompletions(fakeboop.tabCompletions).setName(fakeboop.name);
-
-import prince from "./modules/commands/prince.js";
-register("command", prince.callback).setTabCompletions(prince.tabCompletions).setName(prince.name);
 
 // Solvers
-import fetchur from "./modules/solvers/fetchur.js";
-register("chat", fetchur.callback).setCriteria(fetchur.criteria);
+require("./modules/solvers/fetchur.js");
+require("./modules/solvers/puzzler.js")
+require("./modules/solvers/quickmaths.js")
 
-import puzzler from "./modules/solvers/puzzler.js";
-register("chat", puzzler.chat).setCriteria(puzzler.criteria);
-register("tick", puzzler.tick);
 
-// Utilities
-require("./modules/utilities/betterfriendlist.js");
-require("./modules/utilities/betterparties.js");
-require("./modules/utilities/autoignore.js");
-require("./modules/utilities/joinleavecolors.js");
+// Better Utilities
+require("./modules/better-utilities/betterfasttravel.js")
+require("./modules/better-utilities/betterfriendlist.js");
+require("./modules/better-utilities/betterparties.js");
 
-if (settings.getSetting("Quality of Life", "Extra Fast Travel Commands")) {
-    require("./modules/utilities/betterfasttravel.js")
-}
+
+// Chat Utilities
+require("./modules/chat-utilities/autoignore.js");
+require("./modules/chat-utilities/joinleavecolors.js");
+require("./modules/chat-utilities/autol.js");
+require("./modules/chat-utilities/autogg.js");
+require("./modules/chat-utilities/hidemessages.js");
+require("./modules/chat-utilities/bypasseasy.js");

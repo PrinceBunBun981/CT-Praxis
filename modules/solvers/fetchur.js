@@ -1,9 +1,7 @@
 import { settings } from "../../settings";
-export default ({
-    name: 'fetchur',
-    criteria: '&e[NPC] Fetchur&f: ${str}',
-    callback: (str, event) => {
-        if (!settings.getSetting("Solvers", "Fetchur Enabled")) return;
+
+register("chat", (str, event) => {
+    if (!settings.getSetting("Solvers", "Fetchur")) return;
         if (str.includes("tmrw")) {
             ChatLib.chat("&e[NPC] Fetchur&f: &cYou've already solved this puzzle for today.");
             return cancel(event);
@@ -60,5 +58,4 @@ export default ({
             ChatLib.chat("&e[NPC] Fetchur&f: im looking for &dRabbit's Foot&f.");
             return cancel(event);
         }
-    },
-})
+}).setCriteria('&e[NPC] Fetchur&f: ${str}');
