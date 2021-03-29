@@ -5,7 +5,7 @@
       {
         "type": "button",
         "name": "",
-        "text": "&cv1.4.7",
+        "text": "&cv1.5.0",
         "method": "/Function(\n() => {\n}\n)/",
         "hidden": false
       },
@@ -300,6 +300,37 @@
       {
         "type": "toggle",
         "name": "Quick Maths",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Debug",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Sends the &dProxy&7 you're on in chat.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo sendproxydebug\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Send Proxy Debug",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Sends the &dServer&7 you're on in chat.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo sendserverdebug\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Send Server Debug",
         "value": true,
         "hidden": false
       }

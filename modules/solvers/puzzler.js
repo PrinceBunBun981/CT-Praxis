@@ -5,6 +5,8 @@ let cVal = 0;
 let pos = [0, 0, 0];
 let elapsed = 0;
 
+// IMPORTANT: This is somewhat broken when it comes to showing particles. I will push a patch soon
+
 register("chat", (str, event) => {
     if (!settings.getSetting("Solvers", "Puzzler")) return;
     if (str.includes("tomorrow")) {
@@ -59,6 +61,7 @@ register("tick", (str, event) => {
             g / 255,
             b / 255).setMaxAge(100);
     } catch (e) {
+        console.log(e)
         ChatLib.chat("&e[NPC] &dPuzzler&f: &cDo not move your mouse after clicking on the NPC for a second or two.");
         toggleDisplay = false;
     }

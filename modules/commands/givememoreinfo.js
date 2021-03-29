@@ -53,6 +53,15 @@ register("command", arg => {
             "&d&m" + ChatLib.getChatBreak("-"),
             new TextComponent(`${prefix}&7 The &dQuick Maths&7 solver automatically solves &dQuick Maths&7 equations and adds a button to say the answer directly in chat.`),
             "&d&m" + ChatLib.getChatBreak("-")));
+        // Debug
+        case "sendproxydebug": return ChatLib.chat(new Message(
+            "&d&m" + ChatLib.getChatBreak("-"),
+            new TextComponent(`${prefix}&7 Upon switching certain servers on &6Hypixel&7, the &dProxy&7 you are currently on will be shown in chat.`),
+            "&d&m" + ChatLib.getChatBreak("-")));
+        case "sendserverdebug": return ChatLib.chat(new Message(
+            "&d&m" + ChatLib.getChatBreak("-"),
+            new TextComponent(`${prefix}&7 Upon switching certain servers on &6Hypixel&7, the &dServer&7 you are currently on will be shown in chat.`),
+            "&d&m" + ChatLib.getChatBreak("-")));
     }
     ChatLib.chat(`&fUnknown command. Type "/help" for help.`)
 }).setName("givememoreinfo").setTabCompletions([""]);

@@ -15,6 +15,7 @@ require("./modules/commands/fakeboop.js");
 require("./modules/commands/prince.js")
 require("./modules/commands/givememoreinfo.js")
 require("./modules/commands/quickreport.js")
+require("./modules/commands/seen.js")
 
 
 // Solvers
@@ -36,3 +37,7 @@ require("./modules/chat-utilities/autol.js");
 require("./modules/chat-utilities/autogg.js");
 require("./modules/chat-utilities/hidemessages.js");
 require("./modules/chat-utilities/bypasseasy.js");
+
+// Debug
+require("./modules/debug/getproxy.js")
+require("./modules/debug/getserver.js")

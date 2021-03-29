@@ -5,6 +5,7 @@ register("command", (arg) => {
         switch (arg.toLowerCase()) {
             case "test":
                 ChatLib.actionBar(`&b&lWoah... you found this? cool.`)
+                ChatLib.chat(Server.getIP());
                 break;
         }
     } else {
