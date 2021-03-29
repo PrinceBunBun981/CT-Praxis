@@ -1,7 +1,7 @@
 {
   "name": "Praxis",
   "creator": "PrinceBunBun981",
-  "description": "A bunch of random features. Type /hwnenu for more information.",
+  "description": "A bunch of random features. Type /pxmenu for more information.",
   "version": "1.5.0",
   "entry": "index.js"
 }
