@@ -24,7 +24,7 @@ function loop() {
 }
 
 function getData(player) {
-	if (!player) return ChatLib.chat("&cIncorrect usage! /seen Player");
+	if (!player) return ChatLib.chat("&cIncorrect usage! /pi Player");
 
 	looping = true;
 
@@ -50,7 +50,9 @@ function getData(player) {
                     let nameHistory = data.name_history
 					let lastLogin = data.last_login;
 					let lastLogout = data.last_logout;
+					let lastGame = data.last_game;
 					let rankFormatted;
+
 					if (data.rank_formatted === "&7") rankFormatted = "&7";
 					else if (data.rank_formatted !== "&7") rankFormatted = `${data.rank_formatted} `;
 
@@ -73,7 +75,9 @@ function getData(player) {
                                 `&6Name History:\n- ${nameHistory.join("\n- ")}`
                             ]),
 							new TextComponent(`&9has been &aonline &9for &a${timeSince(Date.now(), lastLogin).toString().trim()}&9.`),
-							new TextComponent(`\n &7- &9Version: &d${currentVersion}&9`)
+							new TextComponent(`\n &7- &9Version: &d${currentVersion}&9`),
+							new TextComponent(`\n &7- &9Level: &d${data.level}&9`),
+							
                         ).chat();
 					}
 
@@ -85,8 +89,9 @@ function getData(player) {
 							new TextComponent(
 								`&9has been &coffline &9for &c${timeSince(Date.now(), lastLogout).toString().trim()}&9.`),
                             new TextComponent(`\n &7- &9Last Logged Out: &c${new Date(lastLogout)}&9`),
-							new TextComponent(`\n &7- &9Last Game: &6${data.last_game}&9`
-							)).chat();
+							new TextComponent(`\n &7- &9Last Game: &6${lastGame}&9`),
+							new TextComponent(`\n &7- &9Level: &d${data.level}&9`),
+						).chat();
 					}
 					else if (lastLogin && !lastLogout) {
 						new Message(
@@ -95,7 +100,8 @@ function getData(player) {
                             ]),
 							new TextComponent(
 								`&9last logged in &e${new Date(lastLogin).toString().trim()}&9.`),
-							new TextComponent(`\n&7- &9Last Game: &6${data.last_game}&9`)
+							new TextComponent(`\n &7- &9Last Game: &6${lastGame}&9`),
+							new TextComponent(`\n &7- &9Level: &d${data.level}&9`),
 						).chat();
 					}
 

@@ -5,7 +5,8 @@ register("command", (arg) => {
         switch (arg.toLowerCase()) {
             case "test":
                 ChatLib.actionBar(`&b&lWoah... you found this? cool.`)
-                ChatLib.chat(Server.getIP());
+                //ChatLib.chat(Server.getIP());
+                ChatLib.command("§c§lF")
                 break;
         }
     } else {
@@ -17,8 +18,8 @@ register("command", (arg) => {
             " &9/warps&f - Fast Travel Extra Warp List (SB).\n",
             " &9/warp&f - Fast Travel Warp Menu (SB).\n",
             " &9/fakeboop&f - Sends a Fake Boop from an admin in chat.\n",
-            " &9/fun&f - Shows all of Hypixel's fun commands.",
-            " &9/maths&f - Solves a math equation.",
+            " &9/fun&f - Shows all of Hypixel's fun commands.\n",
+            " &9/maths&f - Solves a math equation.\n",
             " &9/qr&f - Quickly reports a user (BHop, KA, Reach).",
             "&6&m" + ChatLib.getChatBreak("-")
           );

@@ -4,40 +4,50 @@
  *  
  */
 
-import { settings } from "./settings";
+//-- Functions
+function enableModule(module) {
+    require(module);
+    console.log(`[PRAXIS] Enabled ${module}`);
+}
+
 //-- Import all other modules from the modules folder 
 
 // Commands
-require("./modules/commands/fun.js");
-require("./modules/commands/px.js");
-require("./modules/commands/randomcommands.js");
-require("./modules/commands/fakeboop.js");
-require("./modules/commands/prince.js")
-require("./modules/commands/givememoreinfo.js")
-require("./modules/commands/quickreport.js")
-require("./modules/commands/seen.js")
+enableModule("./modules/commands/fun.js");
+enableModule("./modules/commands/px.js");
+enableModule("./modules/commands/fakeboop.js");
+enableModule("./modules/commands/givememoreinfo.js");
+enableModule("./modules/commands/playerinfo.js");
+enableModule("./modules/commands/list.js");
+enableModule("./modules/commands/getfriends.js");
+enableModule("./modules/commands/aliases.js");
 
 
 // Solvers
-require("./modules/solvers/fetchur.js");
-require("./modules/solvers/puzzler.js")
-require("./modules/solvers/quickmaths.js")
+enableModule("./modules/solvers/fetchur.js");
+enableModule("./modules/solvers/quickmaths.js");
 
 
 // Better Utilities
-require("./modules/better-utilities/betterfasttravel.js")
-require("./modules/better-utilities/betterfriendlist.js");
-require("./modules/better-utilities/betterparties.js");
+enableModule("./modules/better-utilities/betterfasttravel.js");
+enableModule("./modules/better-utilities/betterfriendlist.js");
+enableModule("./modules/better-utilities/betterparties.js");
+enableModule("./modules/better-utilities/betterhollows.js");
 
 
 // Chat Utilities
-require("./modules/chat-utilities/autoignore.js");
-require("./modules/chat-utilities/joinleavecolors.js");
-require("./modules/chat-utilities/autol.js");
-require("./modules/chat-utilities/autogg.js");
-require("./modules/chat-utilities/hidemessages.js");
-require("./modules/chat-utilities/bypasseasy.js");
+enableModule("./modules/chat-utilities/autoutils.js");
+enableModule("./modules/chat-utilities/autoignore.js");
+enableModule("./modules/chat-utilities/changemessages.js");
+enableModule("./modules/chat-utilities/hidemessages.js");
+
 
 // Debug
-require("./modules/debug/getproxy.js")
-require("./modules/debug/getserver.js")
+enableModule("./modules/debug/getproxy.js");
+enableModule("./modules/debug/getserver.js");
+enableModule("./modules/debug/test.js");
+
+
+// Easy Report
+enableModule("./modules/easy-report/socialoptions.js");
+enableModule("./modules/easy-report/quickreport.js");

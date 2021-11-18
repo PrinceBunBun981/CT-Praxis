@@ -18,6 +18,10 @@ register("command", arg => {
         case "betterfasttravel": return ChatLib.chat(new Message(
             "&d&m" + ChatLib.getChatBreak("-"),
             new TextComponent(`${prefix}&7 &dBetter Fast Travel&7 adds more commands to &e/warp&7 and a &e/warps&7 command to list them all.`),
+            "&d&m" + ChatLib.getChatBreak("-"))); 
+        case "betterhollows": return ChatLib.chat(new Message(
+            "&d&m" + ChatLib.getChatBreak("-"),
+            new TextComponent(`${prefix}&7 &dBetter Hollows&7 adds Quality of Life features for &aHypixel Skyblock's &dCrystal Hollows&7.`),
             "&d&m" + ChatLib.getChatBreak("-")));
         // Chat Utilities
         case "autoignore": return ChatLib.chat(new Message(
@@ -36,6 +40,14 @@ register("command", arg => {
             "&d&m" + ChatLib.getChatBreak("-"),
             new TextComponent(`${prefix}&7 &aAuto GG&7 makes you automatically say &egg&7 when an event ends.`),
             "&d&m" + ChatLib.getChatBreak("-")));
+        case "autowho": return ChatLib.chat(new Message(
+                "&d&m" + ChatLib.getChatBreak("-"),
+                new TextComponent(`${prefix}&7 &aAuto Who&7 makes you automatically run the &3who&7 command or &3getstaff&7 command upon switching servers.`),
+                "&d&m" + ChatLib.getChatBreak("-")));
+        case "autoreboop": return ChatLib.chat(new Message(
+                "&d&m" + ChatLib.getChatBreak("-"),
+                new TextComponent(`${prefix}&7 &aAuto Re-Boop&7 makes you automatically respond to people's boops with a boop.`),
+                "&d&m" + ChatLib.getChatBreak("-")));
         case "hidemessages": return ChatLib.chat(new Message(
             "&d&m" + ChatLib.getChatBreak("-"),
             new TextComponent(`${prefix}&7 &cHide Messages&7 hides specific chat messages from being shown to you.`),
@@ -54,6 +66,10 @@ register("command", arg => {
             new TextComponent(`${prefix}&7 The &dQuick Maths&7 solver automatically solves &dQuick Maths&7 equations and adds a button to say the answer directly in chat.`),
             "&d&m" + ChatLib.getChatBreak("-")));
         // Debug
+        case "showdebugprefix": return ChatLib.chat(new Message(
+            "&d&m" + ChatLib.getChatBreak("-"),
+            new TextComponent(`${prefix}&7 Allows you to either show or hide the &3&lDEBUG&7 prefix in chat.`),
+            "&d&m" + ChatLib.getChatBreak("-")));
         case "sendproxydebug": return ChatLib.chat(new Message(
             "&d&m" + ChatLib.getChatBreak("-"),
             new TextComponent(`${prefix}&7 Upon switching certain servers on &6Hypixel&7, the &dProxy&7 you are currently on will be shown in chat.`),

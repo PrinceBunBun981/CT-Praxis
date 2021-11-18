@@ -43,14 +43,15 @@ function print_party() {
             break;
     }
 
-	ChatLib.chat(" ");
+	ChatLib.chat("&f ");
 
     let arrow = "\u00BB ";
 
+    ChatLib.chat(`&eParty Leader:`)
     ChatLib.chat(`${party.leader.status}${arrow} ${party.leader.name}`)
 
     if(party.moderators.length > 0)
-        ChatLib.chat('&eModerators')
+        ChatLib.chat('&eModerators:')
     party.moderators.forEach(mod => {
         if(party.role === roles.leader) {
 			new Message(
@@ -68,7 +69,7 @@ function print_party() {
     })
 
     if(party.members.length > 0)
-        ChatLib.chat('&eMembers')
+        ChatLib.chat('&eMembers:')
 
     party.members.forEach(member => {
         switch(party.role) {

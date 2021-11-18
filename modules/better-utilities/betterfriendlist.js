@@ -66,7 +66,8 @@ class HFController {
 
 				new Message(
 					" &c\u25A0 " + name + " ",
-					new TextComponent("&4-").setClick("run_command", "/fremove " + name).setHoverValue("&7Remove " + name)
+					new TextComponent("&4-").setClick("run_command", "/fremove " + name).setHoverValue("&7Remove " + name),
+					new TextComponent(" &6i").setClick("run_command", "/pi " + name.removeFormatting()).setHoverValue("&7Player Info " + name)
 				).setChatLineId(this.getId()).chat();
 			}
 
@@ -80,6 +81,7 @@ class HFController {
 				).setChatLineId(this.getId()).chat();
 			}
 
+			// watching a replay
 			else if (lines[i].includes("&r&e is watching a replay&r&9")) {
 				let name = lines[i].substring(0, lines[i].indexOf("&r&e is watching a replay&r&9"));
 				new Message(
@@ -89,16 +91,24 @@ class HFController {
 				).setChatLineId(this.getId()).chat();
 			}
 
-
 			// in game or lobby
 			else if (lines[i].includes("&r&e is in ")) {
 				let name = lines[i].substring(0, lines[i].indexOf("&r&e is in "));
 				let game = lines[i].substring(lines[i].indexOf("&r&e is in ") + 11);
-
 				new Message(
 					new TextComponent(" &a\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
 					new TextComponent(name).setClick("suggest_command", "/w " + ChatLib.removeFormatting(name) + " ").setHoverValue("&7Message " + name),
 					" &8is in " + game
+				).setChatLineId(this.getId()).chat();
+			}
+
+			// playing smp
+			else if (lines[i].includes("&r&e is playing SMP")) {
+				let name = lines[i].substring(0, lines[i].indexOf("&r&e is playing SMP"));
+				new Message(
+					new TextComponent(" &a\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
+					new TextComponent(name).setClick("suggest_command", "/w " + ChatLib.removeFormatting(name) + " ").setHoverValue("&7Message " + name),
+					" &8is playing on an SMP"
 				).setChatLineId(this.getId()).chat();
 			}
 

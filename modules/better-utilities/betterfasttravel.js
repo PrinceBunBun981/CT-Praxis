@@ -7,7 +7,7 @@ register("command", (arg) => {
         new TextComponent(" &9Private Island&f - home, island, is")
             .setClick("run_command", "/warp home")
             .setHoverValue("&7Runs &e/warp home&7 on click."), "\n",
-        new TextComponent(" &9Spider's Den&f - spider, sd")
+        new TextComponent(" &9Spider's Den&f - spider, sd, den")
             .setClick("run_command", "/warp spider")
             .setHoverValue("&7Runs &e/warp spider&7 on click."), "\n",
         new TextComponent(" &9Blazing Fortress&f - nether, net, bf, blazing, blaze")
@@ -84,9 +84,15 @@ register("command", (arg) => {
         new TextComponent(" &9Dungeon Hub&f - dungeon_hub, dungeon, dh")
             .setClick("run_command", "/warp dungeon_hub")
             .setHoverValue("&7Runs &e/warp dungeon_hub&7 on click."),
-        "\n",
-        "\n",
-        "\n",
+        new TextComponent(" &9Museum&f - museum")
+            .setClick("run_command", "/warp museum")
+            .setHoverValue("&7Runs &e/warp museum&7 on click."),
+        new TextComponent(" &9Dwarven Forge&f - forge, df")
+            .setClick("run_command", "/warp forge")
+            .setHoverValue("&7Runs &e/warp forge&7 on click."),
+        new TextComponent(" &9Crystal Hallows&f - crystals, hallows, ch")
+            .setClick("run_command", "/warp crystals")
+            .setHoverValue("&7Runs &e/warp crustals&7 on click."),
         "\n",
         "\n",
         "                              ",
@@ -117,6 +123,7 @@ register("command", (arg) => {
         case "is": return ChatLib.command("warp home")
         // SPIDERS DEN
         case "spider": return ChatLib.command("warp spider")
+        case "den": return ChatLib.command("warp spider")
         case "sd": return ChatLib.command("warp spider")
         // BLAZING FORTRESS
         case "nether": return ChatLib.command("warp nether")
@@ -182,6 +189,17 @@ register("command", (arg) => {
         case "dungeon_hub": return ChatLib.command("warp dungeon_hub")
         case "dungeon": return ChatLib.command("warp dungeon_hub")
         case "dh": return ChatLib.command("warp dungeon_hub")
+        // MUSEUM
+        case "museum": return ChatLib.command("warp museum")
+        // DWARVEN FORGE
+        case "forge": return ChatLib.command("warp forge")
+        case "df": return ChatLib.command("warp forge")
+        // CRYSTAL HALLOWS
+        case "crystals": return ChatLib.command("warp crystals")
+        case "crystal": return ChatLib.command("warp crystals")
+        case "hallows": return ChatLib.command("warp crystals")
+        case "hallow": return ChatLib.command("warp crystals")
+        case "ch": return ChatLib.command("warp crystals")
     }
-    ChatLib.chat("&cSorry, I don't understand that warp type. Type &e/warps&c for a list of all &dFast Travel&c destinations.")
-}).setName("warp").setTabCompletions(["hub", "lobby", "l", "home", "island", "is", "spider", "sd", "nether", "net", "bf", "blazing", "blaze", "end", "te", "park", "tp", "forest", "tree", "gold", "gm", "deep", "dc", "mines", "dwarf", "dwarven", "dm", "barn", "tb", "desert", "md", "mushroom", "castle", "tc", "da", "ss", "sirius", "dark", "crypt", "gc", "grave", "nest", "ton", "magma", "mcb", "drag", "dragon", "dn", "jungle", "ji", "howl", "hc","dungeon_hub", "dungeon", "dh"]);
+    ChatLib.chat("&cSorry, I don't understand that warp type. Type &e/warp&c to open the &dFast Travel&c menu.")
+}).setName("warp");

@@ -11,7 +11,14 @@ register("playerJoined", (event, player) => {
     }
 })
 
+var prefix;
+if (settings.getSetting("Debug", "Show Debug Prefix")) {
+    prefix = "&3&lDEBUG! "
+} else {
+    prefix = ""
+}
+
 register("chat", (proxy, event) => {
     cancel(event)
-    ChatLib.chat(`&3&lDEBUG!&7 Connected to proxy &dchi-hp-${proxy}&7.`)
+    ChatLib.chat(`${prefix}&7Connected to proxy &dchi-hp-${proxy}&7.`)
 }).setCriteria("&fchi-hp-${proxy}&r");

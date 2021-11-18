@@ -5,7 +5,7 @@
       {
         "type": "button",
         "name": "",
-        "text": "&cv1.5.0",
+        "text": "&cv1.6.0",
         "method": "/Function(\n() => {\n}\n)/",
         "hidden": false
       },
@@ -87,6 +87,19 @@
         "name": "Better Fast Travel",
         "value": true,
         "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Adds QoL features for the &dCrystal Hollows&7. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo betterhollows\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Better Hollows",
+        "value": true,
+        "hidden": false
       }
     ]
   },
@@ -103,20 +116,7 @@
       {
         "type": "toggle",
         "name": "Auto Ignore",
-        "value": true,
-        "hidden": false
-      },
-      {
-        "type": "button",
-        "name": "&7Bypasses saying &eez&7 on Hypixel filter by adding unicode.",
-        "text": "",
-        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autoignore\", true);\n}\n)/",
-        "hidden": false
-      },
-      {
-        "type": "toggle",
-        "name": "Bypass EZ",
-        "value": true,
+        "value": false,
         "hidden": false
       },
       {
@@ -157,12 +157,103 @@
         "name": "Auto GG",
         "value": true,
         "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Automatically says &eThanks Watchdog&7 in chat when WD posts an announcement.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autol\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Thanks Watchdog",
+        "value": false,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Automatically shows the players in your server upon joining.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autowho\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto Who",
+        "value": false,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Automatically shows the staff in your server upon joining.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autowho\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto Get Staff",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Automatically sends boop back to people.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo autoreboop\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto Re-Boop",
+        "value": true,
+        "hidden": false
       }
     ]
   },
   {
-    "name": "Pit Utilities",
+    "name": "Hide Messages",
     "settings": [
+      {
+        "type": "button",
+        "name": "&7Hides &e/tip&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Tips",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides earning &2Guild XP&7 messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Guild XP",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Hides \"&cThis gift is for (user), sorry!&7\" messages. (&aSkyblock&7)",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Hide Other Gifts",
+        "value": true,
+        "hidden": false
+      },
       {
         "type": "button",
         "name": "&7Hides &c&lSTREAK!&7 messages.",
@@ -218,50 +309,6 @@
     ]
   },
   {
-    "name": "Hide Messages",
-    "settings": [
-      {
-        "type": "button",
-        "name": "&7Hides &e/tip&7 messages.",
-        "text": "",
-        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
-        "hidden": false
-      },
-      {
-        "type": "toggle",
-        "name": "Hide Other Gifts",
-        "value": true,
-        "hidden": false
-      },
-      {
-        "type": "button",
-        "name": "&7Hides earning &2Guild XP&7 messages.",
-        "text": "",
-        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
-        "hidden": false
-      },
-      {
-        "type": "toggle",
-        "name": "Hide Tips",
-        "value": true,
-        "hidden": false
-      },
-      {
-        "type": "button",
-        "name": "&7Hides \"&cThis gift is for (user), sorry!&7\" messages. (&aSkyblock&7)",
-        "text": "",
-        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo hidemessages\", true);\n}\n)/",
-        "hidden": false
-      },
-      {
-        "type": "toggle",
-        "name": "Hide Guild XP",
-        "value": true,
-        "hidden": false
-      }
-    ]
-  },
-  {
     "name": "Solvers",
     "settings": [
       {
@@ -310,6 +357,19 @@
     "settings": [
       {
         "type": "button",
+        "name": "&7Shows the &3&lDEBUG&7 prefix in chat before debug messages.",
+        "text": "",
+        "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo showdebugprefix\", true);\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Show Debug Prefix",
+        "value": false,
+        "hidden": false
+      },
+      {
+        "type": "button",
         "name": "&7Sends the &dProxy&7 you're on in chat.",
         "text": "",
         "method": "/Function(\n() => {\n    ChatLib.command(\"givememoreinfo sendproxydebug\", true);\n}\n)/",
@@ -331,6 +391,37 @@
       {
         "type": "toggle",
         "name": "Send Server Debug",
+        "value": true,
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "name": "Easy Report",
+    "settings": [
+      {
+        "type": "button",
+        "name": "&7Enables automatically confirming chat reports..",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Auto Confirm Report",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "button",
+        "name": "&7Enables a button to quickly report users based on a filter with &e/qr&7.",
+        "text": "",
+        "method": "/Function(\n() => {\n}\n)/",
+        "hidden": false
+      },
+      {
+        "type": "toggle",
+        "name": "Quick Report",
         "value": true,
         "hidden": false
       }

@@ -1,0 +1,1 @@
+register("command", () => ChatLib.command("fishingstats")).setName("fs");
