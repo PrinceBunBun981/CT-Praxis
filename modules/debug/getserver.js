@@ -12,6 +12,9 @@ register("playerJoined", (event, player) => {
         if (settings.getSetting("Chat Utilities", "Auto Get Staff")) {
             ChatLib.command("getstaff", true);
         }
+        if (settings.getSetting("Better Utilities", "Auto Check Nicked")) {
+            ChatLib.command("checknicked", true);
+        }
         return;
     }
 })

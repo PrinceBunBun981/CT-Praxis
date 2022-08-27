@@ -13,7 +13,7 @@ const constants = new PVObject(
 
 register("chat", (player, message, event) => {
     if (!settings.getSetting("Easy Report", "Quick Report")) return;
-    var username = ChatLib.removeFormatting(player).replace(/\[(.+)\]+ (.+)/g, `$2`);
+    var username = ChatLib.removeFormatting(player).replace(/\[(.+)\]+ (.+)/g, `$2`).split(" ")[0].replace(":", "");
     var clenseMessage = message.toLowerCase().replace(/[0-9]/g, "").replace(/[{*}]/g, "")
     var p1 = new Message(
         `${player}: ${message}`,

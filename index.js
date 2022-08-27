@@ -21,6 +21,7 @@ enableModule("./modules/commands/playerinfo.js");
 enableModule("./modules/commands/list.js");
 enableModule("./modules/commands/getfriends.js");
 enableModule("./modules/commands/aliases.js");
+//enableModule("./modules/commands/checknicked.js");
 
 
 // Solvers

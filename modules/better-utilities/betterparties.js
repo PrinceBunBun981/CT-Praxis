@@ -68,7 +68,7 @@ function print_party() {
         }
     })
 
-    if(party.members.length > 0)
+    if (party.members.length > 0)
         ChatLib.chat('&eMembers:')
 
     party.members.forEach(member => {
@@ -99,7 +99,7 @@ register('chat', () => {
         party.waiting = false;
         print_party()
     }
-}).setChatCriteria('&9&m-----------------------------&r')
+}).setChatCriteria('&9&m-----------------------------------------------------&r')
 
 register('chat', () => {
     if (!settings.getSetting("Better Utilities", "Better Parties")) return;

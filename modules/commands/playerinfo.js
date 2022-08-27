@@ -64,9 +64,15 @@ function getData(player) {
 
 					// checks for staff
 					else if (!lastLogin && !lastLogout) {
-						ChatLib.chat(
-							`${rankFormatted + realName} &chasn't logged onto Hypixel.`
-						);
+						new Message(
+                            new TextComponent(`${rankFormatted + realName} `).setHoverValue([
+                                `&6Name History:\n- ${nameHistory.join("\n- ")}`
+                            ]),
+							new TextComponent(`&chas their login API disabled.`),
+							new TextComponent(`\n &7- &9Version: &d${currentVersion}&9`),
+							new TextComponent(`\n &7- &9Level: &d${data.level}&9`),
+							
+                        ).chat();
 					}
 
 					else if (data.online) {

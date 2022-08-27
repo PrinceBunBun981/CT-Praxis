@@ -75,7 +75,7 @@ class HFController {
 			else if (lines[i].includes("&r&e is in an unknown realm&r&9")) {
 				let name = lines[i].substring(0, lines[i].indexOf("&r&e is in an unknown realm&r&9"));
 				new Message(
-					new TextComponent(" &5\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
+					new TextComponent(" &a\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
 					new TextComponent(name).setClick("suggest_command", "/w " + ChatLib.removeFormatting(name) + " ").setHoverValue("&7Message " + name),
 					" &8an unknown realm"
 				).setChatLineId(this.getId()).chat();
@@ -109,6 +109,17 @@ class HFController {
 					new TextComponent(" &a\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
 					new TextComponent(name).setClick("suggest_command", "/w " + ChatLib.removeFormatting(name) + " ").setHoverValue("&7Message " + name),
 					" &8is playing on an SMP"
+				).setChatLineId(this.getId()).chat();
+			}
+
+			// bust
+			else if (lines[i].includes("&r&e is currently &r&5Busy")) {
+				let name = lines[i].substring(0, lines[i].indexOf("&r&e is currently &r&5Busy"));
+
+				new Message(
+					new TextComponent(" &5\u25A0 ").setClick("run_command", "/p invite " + ChatLib.removeFormatting(name)).setHoverValue("&7Party " + name),
+					new TextComponent(name).setClick("suggest_command", "/w " + ChatLib.removeFormatting(name) + " ").setHoverValue("&7Message " + name),
+					" &8is currently &5Busy"
 				).setChatLineId(this.getId()).chat();
 			}
 
